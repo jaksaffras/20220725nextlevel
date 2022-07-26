@@ -21,12 +21,14 @@ date_strings = [  # <1>
     'Febrifuge 1, 2021',
     '    2/1/21',
     'abc 2/1/21',
+    'March 42, 1955',
 ]
 
 for date_string in date_strings:
     print(f"{date_string:25s}", end=' ')
     try:
         dt = parser.parse(date_string)  # <2>
-        print(dt)
     except ValueError as err:
         print(err)
+    else:
+        print(dt)

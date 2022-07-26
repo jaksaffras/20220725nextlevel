@@ -18,6 +18,9 @@ def main(args):
     )  # <3>
 
     if response.status_code == requests.codes.OK:  # 200?
+        print(response.content)
+        print('-' * 60)
+        print('-' * 60)
         data = response.json()  # <4>
         for entry in data: # <5>
             if isinstance(entry, dict):

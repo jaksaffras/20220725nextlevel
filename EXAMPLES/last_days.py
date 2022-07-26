@@ -11,9 +11,9 @@ def get_last_days(year):
 
 if __name__ == '__main__':
 
-    last_days = get_last_days(2021)
+    last_days = get_last_days(2022)
 
     for last_day in last_days:
-        lwd = last_day.strftime("%A")  # <.>
-        print("{:9s} {}".format(lwd, last_day))
+        weekday = last_day.strftime("%A")  # <.>
+        print("{:9s} {}".format(weekday, last_day))
 

@@ -6,4 +6,5 @@ today = date.today()
 
 text_calendar = TextCalendar()  # <1>
 print(text_calendar.formatmonth(today.year, today.month))  # <2>
-
+print('-' * 60)
+print(text_calendar.formatyear(today.year))

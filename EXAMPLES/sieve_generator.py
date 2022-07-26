@@ -11,6 +11,6 @@ def next_prime(limit):
         yield i  # <3>
 
 
-np = next_prime(200)  # <4>
+np = next_prime(100)  # <4>
 for prime in np:  # <5>
     print(prime, end=' ')

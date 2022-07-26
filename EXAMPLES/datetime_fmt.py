@@ -7,6 +7,7 @@ gates_bd = datetime(1955, 10, 28, 20, 58, 0)  # <1>
 print(gates_bd)  # <2>
 print()
 
+
 print(gates_bd.strftime('Bill was born on %B %d, %Y at %I:%M %p'))  # <3>
 print()
 
