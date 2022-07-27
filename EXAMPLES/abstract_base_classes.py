@@ -19,14 +19,12 @@ class Cat(Animal):  # <3>
 class Duck(Animal): # <3>
     pass  # <5>
 
-d = Dog()
-d.speak()
+classes = Cat, Dog, Duck
 
-c = Cat()
-c.speak()
-
-try:
-    d = Duck()  # <6>
-    d.speak()
-except TypeError as err:
-    print(err)
+for cls in classes:
+    try:
+        obj = cls()
+    except TypeError as err:
+        print(err)
+    else:
+        obj.speak()
