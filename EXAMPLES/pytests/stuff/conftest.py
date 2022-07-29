@@ -8,3 +8,4 @@ def common_fixture():  # <1>
 
 def pytest_runtest_setup(item):  # <2>
     print("Hello from setup,", item)
+

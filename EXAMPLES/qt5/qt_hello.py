@@ -6,7 +6,7 @@ class HelloWindow(QMainWindow): # <2>
 
     def __init__(self):
         super().__init__()
-        self._label = QLabel("Hello PyQt5 World")
+        self._label = QLabel("Hello PyQt5 World for Charter")
         self.setCentralWidget(self._label)
 
 if __name__ == "__main__":

@@ -20,6 +20,10 @@ print(solar['innerplanets'][0]['name'])
 print('*' * 60)
 for planet in solar['innerplanets'] + solar['outerplanets']:
     print(planet['name'])
+    moons = planet.get('moons')
+    if moons:
+        for moon in moons:
+            print(f"   {moon}")
 
 print("*" * 60)
 for group in solar:

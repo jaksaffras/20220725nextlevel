@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import random
 from multiprocessing.dummy import Pool # <1>
 

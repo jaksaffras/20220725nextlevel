@@ -15,6 +15,7 @@ with paramiko.Transport(('localhost', 22)) as transport:  # <.>
         sftp.rmdir(REMOTE_DIR)
     except OSError as err:
         print(err)
+
     sftp.mkdir(REMOTE_DIR)
 
     # sftp.put(local-file)
@@ -26,6 +27,7 @@ with paramiko.Transport(('localhost', 22)) as transport:  # <.>
     print(sftp.listdir())
     print()
     print(sftp.listdir(REMOTE_DIR))
+
 
 
 

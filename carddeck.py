@@ -1,7 +1,12 @@
 import random
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.Info)
 
 class Card:
     def __init__(self, rank, suit):
+        logger.info("Created deck")
         self._rank = rank
         self._suit = suit
 

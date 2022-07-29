@@ -7,6 +7,12 @@ Person = namedtuple('Person', 'first_name last_name')  # <1>
 FIRST_NAME = "Guido"
 LAST_NAME = "Von Rossum"
 
+LATEST_TERM = 46
+
+@pytest.fixture
+def term_range():
+    return list(range(1, LATEST_TERM + 1))
+
 @pytest.fixture  # <2>
 def person():
     """

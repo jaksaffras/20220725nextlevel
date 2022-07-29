@@ -2,6 +2,7 @@
 <solarsystem>
     <star>Sun</star>
     <innerplanets>
+        <deathstar/>
         <planet planetname="Mercury"/>
         <planet planetname="Venus"/>
         <planet planetname="Earth">
@@ -11,6 +12,9 @@
             <moon>Deimos</moon>
             <moon>Phobos</moon>
         </planet>
+        <spacejunk>
+            <oldsat>Sputnik</oldsat>
+        </spacejunk>
     </innerplanets>
     <asteroids>
         <asteroid >Ceres</asteroid>

@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 import random
 import queue
-from threading import Thread, Lock as tlock
+from threading import Thread, Lock
 import time
 
-NUM_ITEMS = 25000
-POOL_SIZE = 100
+NUM_ITEMS = 170000
+POOL_SIZE = 128
 
 q = queue.Queue(0)  # <1>
 
 shared_list = []
-shlist_lock = tlock()  # <2>
-stdout_lock = tlock()  # <2>
+shlist_lock = Lock()  # <2>
+stdout_lock = Lock()  # <2>
 
 
 class RandomWord():  # <3>
@@ -34,7 +34,7 @@ class Worker(Thread):  # <4>
         while True:
             try:
                 s1 = q.get(block=False)  # <7>
-                s2 = s1.upper() + '-' + s1.upper()
+                s2 = s1.upper()
                 with shlist_lock:  # <8>
                     shared_list.append(s2)
 

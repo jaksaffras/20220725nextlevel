@@ -6,6 +6,7 @@ def test_one():
     assert 1
 
 @pytest.mark.alpha  # <1>
+@pytest.mark.beta
 def test_two():
     assert 1
 

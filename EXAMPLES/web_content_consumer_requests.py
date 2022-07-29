@@ -1,5 +1,7 @@
 import sys
 import requests
+from pprint import pprint
+
 
 BASE_URL = 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/'  # <1>
 
@@ -22,11 +24,14 @@ def main(args):
         print('-' * 60)
         print('-' * 60)
         data = response.json()  # <4>
+        pprint(data)
+        print('-' * 60)
+        print('-' * 60)
         for entry in data: # <5>
             if isinstance(entry, dict):
                 meta = entry.get("meta")
                 if meta:
-                    part_of_speech = '({})'.format(entry.get('fl'))
+                    part_of_speech = '({})'.format(entry.get('fl', 'N/A'))
                     word_id = meta.get("id")
                     print("{} {}".format(word_id.upper(), part_of_speech))
                 if "shortdef" in entry:

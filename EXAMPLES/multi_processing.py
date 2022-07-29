@@ -5,7 +5,7 @@ from multiprocessing import Manager, Lock, Process, Queue, freeze_support
 from queue import Empty
 import time
 
-NUM_ITEMS = 25000  # <1>
+NUM_ITEMS = 30000  # <1>
 POOL_SIZE = 64
 
 
@@ -22,7 +22,7 @@ class RandomWord():  # <2>
 class Worker(Process):  # <4>
 
     def __init__(self, name, queue, lock, result):  # <5>
-        Process.__init__(self)
+        Process.__init__(self)  # or super().__init__()
         self.queue = queue
         self.result = result
         self.lock = lock
